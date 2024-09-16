@@ -20,5 +20,5 @@ module "rds_instance" {
   sns_arn                  = aws_sns_topic.alarms.arn
   deploy_read_replica      = var.deploy_read_replica
   use_only_private_subnets = var.use_only_private_subnets
-  reader_instance_type     = "db.t3.large"
+  reader_instance_type     = var.reader_instance_type
 }

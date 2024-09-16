@@ -71,4 +71,8 @@ resource "aws_eks_node_group" "main" {
     "k8s.io/cluster-autoscaler/${var.environment}-eks" = "owned"
     "k8s.io/cluster-autoscaler/enabled"                = true
   }
+
+  lifecycle {
+    ignore_changes = [scaling_config]
+  }
 }

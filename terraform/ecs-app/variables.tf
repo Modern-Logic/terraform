@@ -242,3 +242,7 @@ variable "use_only_private_subnets" {
   default = false
   description = "If true, will use only private subnets to provision all network-dependant resources"
 }
+variable "reader_instance_type" {
+  type    = string
+  default = "db.t3.xlarge"
+}
